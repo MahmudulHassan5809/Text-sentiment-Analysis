@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="jumbotron">
+		<h1 class="display-3">Text Sentiment Analysis!</h1>
+		<p class="lead">WelCome To Flask ML APP</p>
+		<hr class="m-y-md">
+		<p></p>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<form action="{{ url_for('predict')}}" method="POST">
+	         <div class="form-group">
+	         	<label>Input Your Comment</label>
+	         	<textarea name="text"cols="30" rows="10" class="form-control"></textarea>
+	         </div>
+	         <div class="form-group">
+	         	<input type="submit" value="Predict" class="form-control btn btn-dark btn-block">
+	         </div>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<h1>Result</h1>
+			{% if predction == 1 %}
+				<h1 class="text-success">Positive Sentimental Analysis</h1>
+			{% elif predction == 0 %}
+				<h1 class="text-danger">Negative Sentimental Analysis</h1>
+			{% endif %}
+		</div>
+	</div>
+{% endblock content %}
