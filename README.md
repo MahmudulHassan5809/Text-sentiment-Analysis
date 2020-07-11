@@ -1,6 +1,6 @@
 # Text Sentiment Analyis(NLP)
 
-    Machine Learning With FLask
+    Machine Learning With FLASK
 
 
 ## Quick Start Using Pipenv For Server

@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # Variables
 app = Flask(__name__)
 
-# Views
+# Viewss
 @app.route('/')
 def index():
     return render_template('home.html')
